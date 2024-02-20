@@ -41,7 +41,6 @@ jobs:
           npm run build --force
       - name: Lint
         run: |
-          #npm run lint
           ng lint
       - name: Update types to latest
         run: |
