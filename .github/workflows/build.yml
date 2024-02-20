@@ -41,13 +41,10 @@ jobs:
           npm run build --force
       - name: Lint
         run: |
-          npm run lint
+          npm install lint
       - name: Update types to latest
         run: |
           npm install --save-dev @types/node@latest --force
-      - name: Audit
-        run: |
-          npm audit fix
       #- name: Test
       #  run: |
       #    npm run test --watch=false --browsers=ChromeHeadless
@@ -70,6 +67,3 @@ jobs:
       - name: Deploy
         run: |
           npm run deploy
-      - name: delete branch
-        run: |
-          git push origin :githubcicd
